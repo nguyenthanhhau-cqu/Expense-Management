@@ -12,13 +12,13 @@ function App() {
       amount: "650",
       date: new Date(2022, 4, 30),
     },
-    { id: "4", title: "new mouse", amount: "750", date: new Date(2022, 4, 30) },
+    { id: "4", title: "new mouse", amount: "750", date: new Date(2021, 2, 30) },
   ];
   const [expenseAr, setExpenseArr] = useState(expenseArr);
 
   const addExpenseHandler = (expense: ExpenseItemProps) => {
     setExpenseArr((preVal) => {
-      return [...preVal, expense];
+      return [expense, ...preVal];
     });
   };
 
